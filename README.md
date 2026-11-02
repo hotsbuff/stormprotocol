@@ -15,7 +15,8 @@ formats/
 └── attributes_events.ksy
 protocol/
 └── builds/
-    └── 96477.yaml
+    ├── 96477.yaml
+    └── 98348.yaml
 tools/
 └── export_protocol.py
 ```
@@ -53,6 +54,8 @@ YAML schemas serve two purposes:
 2. Define static schemas for bit-packed data, which contains neither type information nor field names.
 
 This allows the same definitions to be shared by implementations in different languages.
+
+A schema can inherit another build using `extends`. For example, `98348.yaml` inherits `96477` and declares `exact: false`: it is a verified compatibility alias, not an official protocol definition. Full schemas generated from official sources declare `exact: true`.
 
 ## Adding a Build
 

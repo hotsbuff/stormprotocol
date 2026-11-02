@@ -1,4 +1,5 @@
 "build": 96477
+"exact": true
 "types":
   - "kind": "int"
     "bounds":

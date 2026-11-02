@@ -77,6 +77,7 @@ def export_schema(source):
 
     return {
         "build": int(build_match.group(1)),
+        "exact": True,
         "types": [export_type(kind, args) for kind, args in value("typeinfos")],
         "header_type": value("replay_header_typeid"),
         "details_type": value("game_details_typeid"),
